@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31112.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JellyEditor3", "JelloEditor\JellyEditor3.csproj", "{A6537D70-2F58-40D4-B581-AA3AA5B73205}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JellyPhysics_Small", "JellyPhysics_Small\JellyPhysics_Small.csproj", "{ED54EBC8-1109-4D99-8F90-D90F2F3C3C1A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A6537D70-2F58-40D4-B581-AA3AA5B73205}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6537D70-2F58-40D4-B581-AA3AA5B73205}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6537D70-2F58-40D4-B581-AA3AA5B73205}.Debug|x86.ActiveCfg = Debug|x86
+		{A6537D70-2F58-40D4-B581-AA3AA5B73205}.Debug|x86.Build.0 = Debug|x86
+		{A6537D70-2F58-40D4-B581-AA3AA5B73205}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6537D70-2F58-40D4-B581-AA3AA5B73205}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6537D70-2F58-40D4-B581-AA3AA5B73205}.Release|x86.ActiveCfg = Release|x86
+		{A6537D70-2F58-40D4-B581-AA3AA5B73205}.Release|x86.Build.0 = Release|x86
+		{ED54EBC8-1109-4D99-8F90-D90F2F3C3C1A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED54EBC8-1109-4D99-8F90-D90F2F3C3C1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED54EBC8-1109-4D99-8F90-D90F2F3C3C1A}.Debug|x86.ActiveCfg = Debug|x86
+		{ED54EBC8-1109-4D99-8F90-D90F2F3C3C1A}.Debug|x86.Build.0 = Debug|x86
+		{ED54EBC8-1109-4D99-8F90-D90F2F3C3C1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED54EBC8-1109-4D99-8F90-D90F2F3C3C1A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED54EBC8-1109-4D99-8F90-D90F2F3C3C1A}.Release|x86.ActiveCfg = Release|x86
+		{ED54EBC8-1109-4D99-8F90-D90F2F3C3C1A}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {28351D4F-E944-4BA3-8F8E-B01E4016C0A0}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,5 @@
+C:\Users\Adam\Desktop\Visual Studio Projects\JE3_Src\JellyPhysics_Small\bin\Release\JellyPhysics_Small.dll
+C:\Users\Adam\Desktop\Visual Studio Projects\JE3_Src\JellyPhysics_Small\bin\Release\JellyPhysics_Small.pdb
+C:\Users\Adam\Desktop\Visual Studio Projects\JE3_Src\JellyPhysics_Small\obj\Release\JellyPhysics_Small.csproj.CoreCompileInputs.cache
+C:\Users\Adam\Desktop\Visual Studio Projects\JE3_Src\JellyPhysics_Small\obj\Release\JellyPhysics_Small.dll
+C:\Users\Adam\Desktop\Visual Studio Projects\JE3_Src\JellyPhysics_Small\obj\Release\JellyPhysics_Small.pdb

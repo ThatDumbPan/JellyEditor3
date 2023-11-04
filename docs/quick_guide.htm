@@ -1,0 +1,200 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=shift_jis">
+<title>JelloCar Level Editor - Quick St</title>
+</head>
+
+<body bgcolor="#666666" link="#99FF66" vlink="#00FF00" alink="#C0C0C0" text="#FFFFFF">
+
+<p align="center">　</p>
+<p align="left"><font size="5">JelloCar Level Editor - Quick Start Guide</font></p>
+<p align="left">　</p>
+<p align="left"><font size="4" color="#99FF66"><b>INTRODUCTION</b></font></p>
+<p align="left"><font size="4">The physics in JelloCar are all based around 
+points connected into shapes.&nbsp; Each point in the shape has mass, and moved 
+independently of the other points.&nbsp; The shape is maintained by spring 
+forces that act along the edges, optional internal springs, and also special 
+&quot;shape matching&quot; forces that try to return an object to its original shape.</font></p>
+<p align="left"><font size="4">JelloCar Level Editor allows quick creation of 
+levels for JelloCar, through a fairly user-friendly interface.</font></p>
+<p align="left"><font size="4">This guide does not try to be a full users 
+manual, but instead explain the basics of building levels for JelloCar.</font></p>
+<p align="left">　</p>
+<p align="left"><font size="4" color="#99FF66"><b>GETTING STARTED</b></font></p>
+<p align="left"><font size="4">&nbsp;Let's make a simple level.&nbsp; After 
+starting up the level editor, choose Options -&gt; Grid Setup.<br>
+Set the &quot;Grid Size&quot; to 15 x 15.&nbsp; This is the number of major lines the grid 
+will be made of, not the spacing between lines.<br>
+Now set the &quot;major grid lines&quot; to 1.&nbsp; This is the distance between major 
+grid lines.<br>
+Finally, set the &quot;Grid Subdivisions&quot; to 5.</font></p>
+<p align="left"><img border="0" src="gridsettings.jpg" width="242" height="157"></p>
+<p align="left">This will create a grid that is 15 x 15 units in size, with 
+major (white) lines every 1 unit, and minor lines (grey) every 0.2 units.</p>
+<p align="left">For reference, the Car in JelloCar is about 3 units long.</p>
+<p align="left">NOTE: You can <b>pan</b> the view by dragging the mouse with the 
+middle mouse button pressed, and you can <b>zoom</b> the view by dragging 
+left/right with the right mouse button pressed.</p>
+<p align="left">　</p>
+<p align="left"><font color="#99FF66"><b>MAKING A STATIC BODY</b></font></p>
+<p align="left">First, let's make a simple, completely static platform.&nbsp; 
+Click the &quot;New Object&quot; button. This creates a new object in the world, with a 
+default shape:</p>
+<p align="left"><img border="0" src="newobject.jpg" width="331" height="254"></p>
+<p align="left">We will make a very simple shape for this first platform.&nbsp; 
+Don't worry too much about the overall size, we can scale it later.&nbsp; We 
+just need to get the basic proportions right.&nbsp; First, click the &quot;Object&quot; 
+tab in the upper-right, to go into Object mode, and edit this specific object.&nbsp; 
+Next, make sure &quot;Snap&quot; is checked in the Options menu.</p>
+<p align="left">　</p>
+<p align="left"><font color="#99FF66"><b>OBJECT EDITING</b></font></p>
+<p align="left">NOTE: make sure to set a globally unique name for each new body 
+you create, by entering the name into the &quot;name&quot; field in Object edit mode.</p>
+<p align="left">Object editing has 3 basic modes:&nbsp; Point, Spring, and 
+Polygon.&nbsp; In Point mode, you can move, add, and remove the points that make 
+up the shape of the object.&nbsp; </p>
+<p align="left">In Point mode, left click to select a point. hold SHIFT and 
+click to add a new point (it will be added in sequence after the currently 
+selected point).&nbsp; Hold CTRL and drag to move the currently selected point.&nbsp; 
+If &quot;Snap&quot; is enabled, points will snap to the nearest grid point.</p>
+<p align="left">Hold SHIFT and left click a few times to make a basic platform 
+shape, and also CTRL and drag to move the original 3 points, until you have a 
+basic shape:</p>
+
+<p align="left"><img border="0" src="addedpoints.jpg" width="293" height="155"></p>
+<p align="left">To make an object static, you just need to set the &quot;Mass Per 
+Point&quot; on the right to zero (0).</p>
+<p align="left">　</p>
+<p align="left">To make this object visible in the game, we need to define the 
+polygons (triangles) that make up the shape.&nbsp; Click the &quot;Polygons&quot; radial 
+button to switch to Polygon mode.</p>
+<p align="left">To add a polygon, SHIFT + Click the first point in the polygon, 
+and then click the 2 other points.&nbsp; The polygon will be drawn on-screen in 
+the current object color immediately:</p>
+<p align="left"><img border="0" src="addedpoly.jpg" width="293" height="155"></p>
+<p align="left">Continue adding polys until the entire object is filled:</p>
+<p align="left"><img border="0" src="allpolys.jpg" width="293" height="155"></p>
+<p align="left">NOTE:&nbsp; you can remove polygons by clicking on the poly 
+while holding the ALT key on the keyboard.</p>
+<p align="left">　</p>
+<p align="left">That is all that's necessary to make a static object.&nbsp; To 
+recap, static objects must have the &quot;Mass Per Point&quot; set to zero, and should 
+have polygons set to make the object visible.</p>
+<p align="left">Click the &quot;Scene&quot; tab, to go back to scene editing mode. </p>
+<p align="left">In scene mode, click to select an object.&nbsp; Hold SHIFT and 
+drag to move the currently selected object.&nbsp; hold CTRL and drag to rotate 
+the current object.&nbsp; hold ALT and drag to scale the current object.&nbsp; 
+You can also set the position, angle, and scale directly by entering numbers 
+into the boxes on the lower right.&nbsp; Scale the object up a bit, and place it 
+where you would like.</p>
+<p align="left">　</p>
+<p align="left"><font color="#99FF66"><b>MAKING A DYNAMIC OBJECT</b></font></p>
+<p align="left">Next let's make a simple dynamic object.&nbsp; Click the &quot;New 
+Object&quot; button again, select the new object, and give it a unique name.&nbsp; 
+Add a few points to make a shape like this:</p>
+<p align="left"><img border="0" src="dynamicstep1.jpg" width="293" height="155"></p>
+<p align="left">Since this is a dynamic object, make sure to set &quot;Mass Per 
+Point&quot; to 1 (or any positive number) to make this object dynamic.</p>
+<p align="left">Now let's add some springs to help this object keep its shape.&nbsp; 
+There are 2 kinds of springs: Edge springs - spring forces that work on the 
+edges of the shape, and Internal springs - springs you add between various 
+points.&nbsp; Click the &quot;Springs&quot; radio button to switch to Spring mode.</p>
+<p align="left">To add a spring, hold SHIFT, and drag the mouse from 1 point to 
+another.&nbsp; The spring settings will be set to the current &quot;Spring K&quot; and 
+&quot;Damping&quot; settings in the &quot;Spring Settings&quot; section:</p>
+<p align="left">
+<img border="0" src="springsettings.jpg" width="186" height="419"></p>
+<p align="left">For reference, low values are around 80-100, and high values are 
+around 9,000.&nbsp; For damping, try not to exceed values above 50, or things 
+might be unstable.</p>
+<p align="left">Hold SHIFT and drag to create several internal springs:</p>
+<p align="left"><img border="0" src="dynamicstep2.jpg" width="293" height="155"></p>
+<p align="left">Don't forget t set the &quot;Edge Settings&quot; to proper spring values 
+as well.&nbsp; Then, choose a color for the object, and add polygons in the same 
+manner as before.</p>
+<p align="left">NOTE: Shape matching is a system that tries to bring an object 
+back to its base shape, no matter how deformed it gets.&nbsp; These are also 
+spring forces, so you can set the shape matching to any valid spring force.</p>
+<p align="left"><img border="0" src="dynamicstep3.jpg" width="293" height="155"></p>
+<p align="left">　</p>
+<p align="left">Click on the &quot;Scene&quot; tab to go back into scene editing mode, and 
+place the object wherever you want.</p>
+<p align="left">NOTE: each object in the world can be assigned a Material, which 
+defines how it interacts with other objects, and also helps with keeping the 
+game running fast, by ignoring impossible collision calculations.&nbsp; For 
+background objects that will not collide with other background objects, set the 
+material to &quot;0: Basic Ground&quot;.&nbsp; For dynamic objects, set it to &quot;1: Dynamic 
+Object&quot;.&nbsp; Material number 2 and 3 are reserved for the car, and material 4 
+is reserved for background objects made from Ice (very little friction).</p>
+<p align="left">Set the first, static object you made to Material 0, and the new 
+dynamic object to Material 1.</p>
+<p align="left">　</p>
+<p align="left"><font color="#99FF66"><b>KINEMATIC OBJECTS</b></font></p>
+<p align="left">Finally, let's make a kinematic object.&nbsp; Kinematic objects 
+are exactly like dynamic objects, but they are &quot;pinned&quot; to the world instead of 
+moving freely.&nbsp; They can also have special movement controls like Platform 
+Motion (moves back and forth along a path), and Motor (constant rotation).&nbsp; 
+First, make a new object as before, including internal springs and polygons.</p>
+<p align="left">NOTE: Kinematic motion is handled by the Shape Matching springs, 
+so stiff Shape Matching springs will keep the object pinned tightly, while small 
+spring forces will allow the object to stray further.</p>
+<p align="left">To designate an object as kinematic, just check the checkbox:</p>
+<p align="left"><img border="0" src="kinematic.jpg" width="181" height="216"></p>
+<p align="left">To set specific motion, go back to Scene mode, and choose 
+Special -&gt; Object Motion Settings from the menu:</p>
+<p align="left">
+<img border="0" src="motionsettings.jpg" width="359" height="361"></p>
+<p align="left">You can set any combination of Platform Motion and Motor.</p>
+<p align="left">NOTE: &quot;Starting Offset&quot; for platform motion allows you to start 
+a platform midway through it's path.&nbsp; This should be a value between [0,1].</p>
+<p align="left">　</p>
+<p align="left"><font color="#99FF66"><b>SCENE SETTINGS</b></font></p>
+<p align="left">Some other important scene settings also need to be set.&nbsp; 
+Click Special -&gt; Scene Settings:</p>
+<p align="left">
+<img border="0" src="scenesettings.jpg" width="383" height="218"></p>
+<p align="left">
+Scene Name: this is the name for the level that will be shown in the main menu.</p>
+<p align="left">Car Name: name of the car for this level to use.&nbsp; the 
+default car name is &quot;car_and_truck&quot;.&nbsp; This is the only car currently in the 
+game.</p>
+<p align="left">Spawn Position: where the car will start the level.&nbsp; Shown 
+in the editor as a yellow circle.</p>
+<p align="left">Finish Position: the target position that designates the end of 
+the level.&nbsp; Shown in the editor as a light blue square.</p>
+<p align="left">Fall Line:&nbsp; the Y position that designates &quot;out of bounds&quot; 
+for the level.&nbsp; Shown as a purple horizontal line in the editor.</p>
+<p align="left">　</p>
+<p align="left"><font color="#99FF66"><b>SAVING THE SCENE</b></font></p>
+<p align="left">Choosing &quot;Save&quot; from the File menu will just save the current 
+scene layout, not the individual objects in it.</p>
+<p align="left">Choosing &quot;Save all&quot; from the File menu will save the current 
+scene, as well as all objects contained in it.</p>
+<p align="left">　</p>
+<p align="left"><font color="#99FF66"><b>MAKING THE SCENE WORK IN THE GAME</b></font></p>
+<p align="left">From the File menu, choose &quot;Publish to JelloCar&quot;.&nbsp; Find the 
+install directory for JelloCar (defaults to C:/Program Files/JelloCar), and save 
+your scene into the &quot;Assets/Scenes&quot; directory.&nbsp; The editor will 
+automatically add your level to the list, and it will be available the next time 
+you start JelloCar.</p>
+<p align="left">　</p>
+<p align="left">NOTE: Be careful that all of the objects in your scene have 
+unique names, so that you don't accidentally overwrite a file being used by 
+another level accidentally!</p>
+<p align="left">　</p>
+<p align="left">　</p>
+<p align="left"><img border="0" src="finaleditor.jpg" width="840" height="701"></p>
+<p align="left">Best times for the level will automatically be saved.</p>
+<p align="left">　</p>
+<p align="left">And now you should be able to see and play your scene in the 
+game!</p>
+<p align="left">　</p>
+<p align="left">good luck!</p>
+<p align="left">　</p>
+<p align="left">-Walaber</p>
+
+</body>
+
+</html>

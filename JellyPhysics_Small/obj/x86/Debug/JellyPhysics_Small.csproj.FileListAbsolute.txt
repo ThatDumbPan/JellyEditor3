@@ -1,0 +1,5 @@
+C:\DEV\tfitzran_TimLaptop\p4-mdisney\Production\Internal_Development\Apps\JellyCarReturns\JelloEditor\JellyPhysics_Small\bin\x86\Debug\JellyPhysics_Small.dll
+C:\DEV\tfitzran_TimLaptop\p4-mdisney\Production\Internal_Development\Apps\JellyCarReturns\JelloEditor\JellyPhysics_Small\bin\x86\Debug\JellyPhysics_Small.pdb
+C:\DEV\tfitzran_TimLaptop\p4-mdisney\Production\Internal_Development\Apps\JellyCarReturns\JelloEditor\JellyPhysics_Small\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\DEV\tfitzran_TimLaptop\p4-mdisney\Production\Internal_Development\Apps\JellyCarReturns\JelloEditor\JellyPhysics_Small\obj\x86\Debug\JellyPhysics_Small.dll
+C:\DEV\tfitzran_TimLaptop\p4-mdisney\Production\Internal_Development\Apps\JellyCarReturns\JelloEditor\JellyPhysics_Small\obj\x86\Debug\JellyPhysics_Small.pdb
