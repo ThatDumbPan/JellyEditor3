@@ -137,10 +137,5 @@ namespace JelloEditor
         {
             noRope = checkBox1.Checked;
         }
-
-        private void comboBoxMotorTriggerBehavior_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

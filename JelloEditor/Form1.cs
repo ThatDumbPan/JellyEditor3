@@ -243,10 +243,6 @@ namespace JelloEditor
             updateSceneTree();
             redrawImage();
 
-            groupBoxMaterial.Enabled = false;
-            groupBoxTransformation.Enabled = false;
-            groupBoxSettings.Enabled = false;
-
             // check for command-line argument to load a file.
             if (Environment.GetCommandLineArgs().Length > 1)
                 openScene(Environment.GetCommandLineArgs()[1]);
@@ -2200,7 +2196,7 @@ namespace JelloEditor
 
                 if (count == 0)
                 {
-                    // no more references to this game body, it can be removed from ths list.
+                    // no more references to this game body, it can be removed from the list.
                     mSceneBodies.Remove(b);
                     if (b.Name == "goal")
                     {
@@ -2773,10 +2769,23 @@ namespace JelloEditor
             mSelectedObject = i;
             if (mSelectedObject != -1)
             {
-                groupBoxMaterial.Enabled = true;
                 groupBoxTransformation.Enabled = true;
-                groupBoxSettings.Enabled = true;
+                tabControlSceneObjectSettings.Enabled = true;
+                groupBox1.Enabled = true;
+                butSceneCloneObject.Enabled = true;
+                butSceneRemoveObject.Enabled = true;
                 objectToolStripMenuItem.Visible = true;
+                moveUpButton.Enabled = true;
+                moveDownButton.Enabled = true;
+
+                if (mSelectedObject == 0)
+                {
+                    moveUpButton.Enabled = false;
+                }
+                else if (mSelectedObject + 1 == mSceneObjects.Count)
+                {
+                    moveDownButton.Enabled = false;
+                }
 
                 checkBoxIsTrigger.Checked = mSceneObjects[mSelectedObject].isTrigger;
                 checkBoxTriggerNoCam.Checked = mSceneObjects[mSelectedObject].triggerNoCam;
@@ -2807,9 +2816,11 @@ namespace JelloEditor
             }
             else
             {
-                groupBoxMaterial.Enabled = false;
                 groupBoxTransformation.Enabled = false;
-                groupBoxSettings.Enabled = false;
+                tabControlSceneObjectSettings.Enabled = false;
+                groupBox1.Enabled = false;
+                butSceneCloneObject.Enabled = false;
+                butSceneRemoveObject.Enabled = false;
                 objectToolStripMenuItem.Visible = false;
                 labelMaterial.Text = "No object selected";
             }
@@ -3858,18 +3869,18 @@ namespace JelloEditor
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
-            tabControlSceneObjectSettings.SelectedIndex = 1;
             if (mSelectedObject != -1)
                 mSceneObjects[mSelectedObject].isPath = true;
+            tabControlSceneObjectSettings.SelectedIndex = 1;
 
             redrawImage();
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
-            tabControlSceneObjectSettings.SelectedIndex = 0;
             if (mSelectedObject != -1)
                 mSceneObjects[mSelectedObject].isPath = false;
+            tabControlSceneObjectSettings.SelectedIndex = 0;
 
             redrawImage();
         }
@@ -4302,6 +4313,45 @@ namespace JelloEditor
                 lightMode = true;
             }
             redrawImage();
+        }
+
+        private void tabControlSceneObjectSettings_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch (tabControlSceneObjectSettings.SelectedIndex)
+            {
+                case 0:
+                    if (mSceneObjects[mSelectedObject].isPath)
+                    {
+                        MessageBox.Show("Selected object is a path, must use \"Path\" tab!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        tabControlSceneObjectSettings.SelectedIndex = 1;
+                    }
+                    break;
+                case 1:
+                    if (!mSceneObjects[mSelectedObject].isPath)
+                    {
+                        MessageBox.Show("Selected object is not a path, must use \"Scene Object\" tab!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        tabControlSceneObjectSettings.SelectedIndex = 0;
+                    }
+                    break;
+            }
+        }
+
+        private void moveUpButton_Click(object sender, EventArgs e)
+        {
+            SceneObject obj = mSceneObjects[mSelectedObject];
+            int newIndex = mSelectedObject - 1;
+            mSceneObjects.RemoveAt(mSelectedObject);
+            mSceneObjects.Insert(newIndex, obj);
+            selectObject(newIndex);
+        }
+
+        private void moveDownButton_Click(object sender, EventArgs e)
+        {
+            SceneObject obj = mSceneObjects[mSelectedObject];
+            int newIndex = mSelectedObject + 1;
+            mSceneObjects.RemoveAt(mSelectedObject);
+            mSceneObjects.Insert(newIndex, obj);
+            selectObject(newIndex);
         }
     }
 }

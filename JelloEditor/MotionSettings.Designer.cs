@@ -269,7 +269,6 @@ namespace JelloEditor
             this.help.SetShowHelp(this.comboBoxMotorTriggerBehavior, true);
             this.comboBoxMotorTriggerBehavior.Size = new System.Drawing.Size(121, 21);
             this.comboBoxMotorTriggerBehavior.TabIndex = 14;
-            this.comboBoxMotorTriggerBehavior.SelectedIndexChanged += new System.EventHandler(this.comboBoxMotorTriggerBehavior_SelectedIndexChanged);
             // 
             // dataGridViewMotorCommands
             // 

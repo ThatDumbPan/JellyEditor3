@@ -120,9 +120,6 @@
   <metadata name="help.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <metadata name="help.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <data name="label6.HelpString" xml:space="preserve">
     <value>This option decides how long to wait (in seconds) before looping back to the start when done with motion. It is HIGHLY recommended to set this option to something other than 0 for moving platforms that you jump onto. *cough cough* johark *cough cough*</value>
   </data>
